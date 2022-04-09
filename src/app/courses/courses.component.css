@@ -1,0 +1,28 @@
+.course-btn {
+      background-color: teal;
+      padding: 10px 30px;
+      color: #fff;
+      transition: all ease-in .4s;
+}
+
+.course-btn:hover {
+      background-color: #004949;
+}
+
+.card-title {
+      cursor: pointer;
+}
+
+.card-title:hover {
+      color: teal;
+}
+
+.course-detail {
+      margin-top: 30px;
+}
+
+.delCourse {
+      position: absolute;
+      top: 0;
+      right: 0;
+}

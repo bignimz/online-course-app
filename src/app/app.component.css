@@ -1,0 +1,13 @@
+.side-link {
+      font-size: 20px;
+      color: #333;
+      margin-top: 20px;
+}
+
+.side-link:hover{
+      color: teal;
+}
+
+.active {
+      color: teal;
+}

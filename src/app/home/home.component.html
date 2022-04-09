@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title> Course Outline </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <!-- LESSON LIST -->
+    <div class="course-lessons my-5">
+      <div
+        class="border-bottom my-2"
+        *ngFor="let lesson of courseLessons"
+        style="max-width: 600px"
+      >
+        <div class="border-bottom">
+          <p
+            class="course-lesson card-title mb-4 fs-5"
+            (click)="selectLesson(lesson)"
+          >
+            {{ lesson.title }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <pre>{{ selectedLesson | json }}</pre>
+  </mat-card-content>
+</mat-card>

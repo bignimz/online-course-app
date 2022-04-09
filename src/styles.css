@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+      overflow-x: hidden;
+}
+
+.header {
+      width: 100%;
+      background-color: teal;
+      position: sticky;
+}
+
+.sidebar {
+      border-right: 1px solid #b6b6b6;
+      background-color: #e4e4e4;
+      height: auto;
+}
+
+.main {
+
+
+}
+

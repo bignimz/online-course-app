@@ -1,0 +1,48 @@
+<div
+  class="courses-containers d-flex row row-cols-lg-2 row-cols-md-2 row-cols-sm-1"
+>
+  <div>
+    <div class="courses-lists">
+      <div
+        class="card my-3"
+        *ngFor="let course of courses"
+        style="max-width: 600px"
+      >
+        <div class="card-body">
+          <h3 class="card-title fs-4" (click)="selectCourse(course)">
+            {{ course.title }}
+          </h3>
+          <p class="card-text fs-6">
+            {{ course.description }}
+          </p>
+          <button
+            class="btn-danger delCourse"
+            (click)="deleteCourse(course.id); $event.stopImmediatePropagation()"
+          >
+            x
+          </button>
+          <!-- <a href="#" class="btn course-btn">VIEW COURSE</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-details">
+    <mat-card>
+      <mat-card-header>
+        <div class="view-title">
+          <span *ngIf="selectedCourse; else elseBlock">
+            {{ selectedCourse | titlecase }}
+          </span>
+          <ng-template #elseBlock>Select a Course to view Content</ng-template>
+        </div>
+      </mat-card-header>
+      <div class="course-detail lh-base">
+        {{ selectedCourse | json }}
+      </div>
+      <mat-card-actions>
+        <!-- COURSE ACTIONS -->
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
